@@ -11,6 +11,10 @@
 		133FD8032622E12200BF139D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8012622E12200BF139D /* LoginVC.swift */; };
 		133FD80C2622E18400BF139D /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD80B2622E18400BF139D /* CountryListVC.swift */; };
 		133FD8112622E43000BF139D /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8102622E43000BF139D /* CountryListViewModel.swift */; };
+		133FD8302622FE4D00BF139D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD82F2622FE4D00BF139D /* DBHelper.swift */; };
+		133FD836262305C700BF139D /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD835262305C700BF139D /* LoginUser.swift */; };
+		133FD83B2623128500BF139D /* InitialisationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD83A2623128500BF139D /* InitialisationHelper.swift */; };
+		133FD840262316C600BF139D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD83F262316C600BF139D /* Helpers.swift */; };
 		135274602622A9C300B92E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352745F2622A9C300B92E58 /* AppDelegate.swift */; };
 		135274672622A9C300B92E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135274652622A9C300B92E58 /* Main.storyboard */; };
 		135274692622A9C500B92E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135274682622A9C500B92E58 /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		133FD8012622E12200BF139D /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		133FD80B2622E18400BF139D /* CountryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
 		133FD8102622E43000BF139D /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		133FD82F2622FE4D00BF139D /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		133FD835262305C700BF139D /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		133FD83A2623128500BF139D /* InitialisationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialisationHelper.swift; sourceTree = "<group>"; };
+		133FD83F262316C600BF139D /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		1352745C2622A9C300B92E58 /* CartrackChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrackChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1352745F2622A9C300B92E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		135274662622A9C300B92E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +128,14 @@
 			path = CountryList;
 			sourceTree = "<group>";
 		};
+		133FD834262305BD00BF139D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				133FD835262305C700BF139D /* LoginUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		135274532622A9C300B92E58 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +159,7 @@
 		1352745E2622A9C300B92E58 /* CartrackChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				133FD834262305BD00BF139D /* Models */,
 				135274D22622BC9A00B92E58 /* CustomCells */,
 				1352749E2622AAF100B92E58 /* Constants */,
 				1352749F2622AAF100B92E58 /* Helpers */,
@@ -195,8 +212,11 @@
 		1352749F2622AAF100B92E58 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				133FD83F262316C600BF139D /* Helpers.swift */,
 				135274A02622AB0800B92E58 /* APIHelper.swift */,
 				135274E12622BCF400B92E58 /* UIHelpers.swift */,
+				133FD82F2622FE4D00BF139D /* DBHelper.swift */,
+				133FD83A2623128500BF139D /* InitialisationHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -383,10 +403,14 @@
 				135274A62622AB1900B92E58 /* MainConstants.swift in Sources */,
 				135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */,
 				135274A12622AB0800B92E58 /* APIHelper.swift in Sources */,
+				133FD8302622FE4D00BF139D /* DBHelper.swift in Sources */,
 				135274F52622C24100B92E58 /* ButtonCell.swift in Sources */,
 				135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */,
+				133FD83B2623128500BF139D /* InitialisationHelper.swift in Sources */,
+				133FD836262305C700BF139D /* LoginUser.swift in Sources */,
 				135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */,
 				135274602622A9C300B92E58 /* AppDelegate.swift in Sources */,
+				133FD840262316C600BF139D /* Helpers.swift in Sources */,
 				133FD80C2622E18400BF139D /* CountryListVC.swift in Sources */,
 				133FD8112622E43000BF139D /* CountryListViewModel.swift in Sources */,
 				133FD8022622E12200BF139D /* LoginViewModel.swift in Sources */,

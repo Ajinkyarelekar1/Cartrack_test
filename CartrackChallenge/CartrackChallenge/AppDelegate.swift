@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppBuilder.initDatabase()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         guard let rootVC = UIHelper.rootViewController() else {
             fatalError("failed to get rootVC")

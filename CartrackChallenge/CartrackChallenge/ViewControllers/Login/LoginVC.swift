@@ -69,6 +69,7 @@ extension LoginVC: UITableViewDelegate {
 
 extension LoginVC: LoginViewModelDelegates {
     func showCountrySelection() {
+        self.view.endEditing(true)
         if let countryVC = UIHelper.vcFromSB(from: .main, withIdentifier: CountryListVC.vcIdentifier) as? CountryListVC {
             countryVC.delegate = self
             self.navigationController?.pushViewController(countryVC, animated: true)
@@ -78,7 +79,11 @@ extension LoginVC: LoginViewModelDelegates {
 
 extension LoginVC: CountryListVCDelegate {
     func selectedCountry(country: String) {
-        viewModel.selectedCountry = country
+        viewModel.loginUser.country = country
         tableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .none)
+    }
+    
+    func reset() {
+        tableView.reloadData()
     }
 }

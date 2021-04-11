@@ -24,3 +24,8 @@ enum APIServices: String {
         }
     }
 }
+
+enum UserDefaultKey: String {
+    case isDatabaseCreated = "isDatabaseCreated"
+}
+
