@@ -86,4 +86,11 @@ extension LoginVC: CountryListVCDelegate {
     func reset() {
         tableView.reloadData()
     }
+    
+    func showUsersVC() {
+        self.view.endEditing(true)
+        if let usersVC = UIHelper.vcFromSB(from: .main, withIdentifier: DataListVC.vcIdentifier) as? DataListVC {
+            self.navigationController?.pushViewController(usersVC, animated: true)
+        }
+    }
 }

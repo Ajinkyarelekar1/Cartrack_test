@@ -1,0 +1,6 @@
+framework module Pods_CartrackChallenge {
+  umbrella header "Pods-CartrackChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

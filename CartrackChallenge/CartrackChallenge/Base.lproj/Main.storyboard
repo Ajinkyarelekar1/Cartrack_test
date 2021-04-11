@@ -129,5 +129,57 @@
             </objects>
             <point key="canvasLocation" x="1237.68115942029" y="-100.44642857142857"/>
         </scene>
+        <!--Data ListVC-->
+        <scene sceneID="E5o-Q4-vSg">
+            <objects>
+                <viewController storyboardIdentifier="DataListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="knw-SX-ajL" customClass="DataListVC" customModule="CartrackChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2w-mr-TPK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXA-CA-fm4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.27208956870000001" green="0.6340228873" blue="0.79118067780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Login" id="OOu-Qc-NUL">
+                                        <barButtonItem key="rightBarButtonItem" title="Log out" style="plain" id="RIU-yr-hbL">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="logoutClicked" destination="knw-SX-ajL" id="HNe-M2-dtM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-QY-Uv4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tk2-AI-bXE"/>
+                        <color key="backgroundColor" red="0.2370708627" green="0.7639744718" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tk2-AI-bXE" firstAttribute="trailing" secondItem="wXA-CA-fm4" secondAttribute="trailing" id="4H0-ke-tgr"/>
+                            <constraint firstItem="Tk2-AI-bXE" firstAttribute="trailing" secondItem="DM4-QY-Uv4" secondAttribute="trailing" id="Lzr-k0-XJt"/>
+                            <constraint firstItem="wXA-CA-fm4" firstAttribute="leading" secondItem="T2w-mr-TPK" secondAttribute="leading" id="Rs5-SM-XeV"/>
+                            <constraint firstItem="DM4-QY-Uv4" firstAttribute="leading" secondItem="Tk2-AI-bXE" secondAttribute="leading" id="XtH-O5-pU3"/>
+                            <constraint firstItem="DM4-QY-Uv4" firstAttribute="top" secondItem="wXA-CA-fm4" secondAttribute="bottom" id="Z1j-MR-Dkv"/>
+                            <constraint firstItem="Tk2-AI-bXE" firstAttribute="bottom" secondItem="DM4-QY-Uv4" secondAttribute="bottom" id="l8C-Cs-L7H"/>
+                            <constraint firstItem="wXA-CA-fm4" firstAttribute="top" secondItem="Tk2-AI-bXE" secondAttribute="top" id="y7v-bP-ZBC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fp8-Gu-25N"/>
+                    <connections>
+                        <outlet property="navBar" destination="wXA-CA-fm4" id="7gC-CC-Q2H"/>
+                        <outlet property="tableView" destination="DM4-QY-Uv4" id="XTM-Rg-t4Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEi-wR-Iqj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952" y="-100"/>
+        </scene>
     </scenes>
 </document>

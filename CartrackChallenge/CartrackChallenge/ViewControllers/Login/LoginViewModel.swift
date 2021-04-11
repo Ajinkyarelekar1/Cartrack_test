@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginViewModelDelegates {
     func showCountrySelection()
+    func showUsersVC()
     func reset()
 }
 
@@ -87,6 +88,7 @@ class LoginViewModel: NSObject {
         if DBhelper.shared.authenticateUser(username: uName, password: password, country: country) {
             loginUser = LoginUser()
             delegate?.reset()
+            delegate?.showUsersVC()
         } else {
             Helpers.showAlert(withTitle: "Authentication Failed!", withMessage: "Please check username and password.")
         }
