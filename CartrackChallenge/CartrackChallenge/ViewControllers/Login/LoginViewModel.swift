@@ -26,7 +26,7 @@ class LoginViewModel: NSObject {
     }
     let rows = [
         RowModel(identifier: LogoCell.cellIdentifier(), title: "", height: LogoCell().cellHeight, cellType: .logo),
-        RowModel(identifier: TitleTextFieldCell.cellIdentifier(), title: "Enter UserName", height: TitleTextFieldCell().cellHeight, cellType: .username),
+        RowModel(identifier: TitleTextFieldCell.cellIdentifier(), title: "Enter Username", height: TitleTextFieldCell().cellHeight, cellType: .username),
         RowModel(identifier: TitleTextFieldCell.cellIdentifier(), title: "Enter Password", height: TitleTextFieldCell().cellHeight, cellType: .password),
         RowModel(identifier: TitleTextFieldCell.cellIdentifier(), title: "Select Country", height: TitleTextFieldCell().cellHeight, cellType: .country),
         RowModel(identifier: ButtonCell.cellIdentifier(), title: "Login", height: ButtonCell().cellHeight, cellType: .login),
@@ -99,7 +99,10 @@ class LoginViewModel: NSObject {
             Helpers.showErrorAlert(withMessage: "Please enter Username.")
             return
         }
-        
+        if uName.count < 5 {
+            Helpers.showErrorAlert(withMessage: "Username should have at least 5 characters.")
+            return
+        }
         if DBhelper.shared.isUserExists(username: uName) {
             Helpers.showErrorAlert(withMessage: "User already exists with this username. Please try different username.")
             return
@@ -107,6 +110,10 @@ class LoginViewModel: NSObject {
         
         guard let password = loginUser.password, !password.isEmpty else {
             Helpers.showErrorAlert(withMessage: "Please enter Password.")
+            return
+        }
+        if password.count < 5 {
+            Helpers.showErrorAlert(withMessage: "Password should have at least 5 characters.")
             return
         }
         guard let country = loginUser.country, !country.isEmpty else {

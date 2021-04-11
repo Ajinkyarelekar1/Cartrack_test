@@ -84,7 +84,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Login" id="ZVa-7R-qqV">
+                                    <navigationItem title="Select Country" id="ZVa-7R-qqV">
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="Hi3-jD-W4m">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
@@ -144,7 +144,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Login" id="OOu-Qc-NUL">
+                                    <navigationItem title="Users" id="OOu-Qc-NUL">
                                         <barButtonItem key="rightBarButtonItem" title="Log out" style="plain" id="RIU-yr-hbL">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
@@ -180,6 +180,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEi-wR-Iqj" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1952" y="-100"/>
+        </scene>
+        <!--User DetailsVC-->
+        <scene sceneID="kdp-JB-iZj">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sW2-iV-nI4" customClass="UserDetailsVC" customModule="CartrackChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UhL-Fv-bNg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUt-Jr-KMH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.27208956870000001" green="0.6340228873" blue="0.79118067780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="User Details" id="fec-jU-Aaz">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="ytA-Fp-Maw">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="navBackClikced" destination="sW2-iV-nI4" id="VGN-3w-8CG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="khZ-oS-sm0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q3b-lJ-JJj"/>
+                        <color key="backgroundColor" red="0.2370708627" green="0.7639744718" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q3b-lJ-JJj" firstAttribute="bottom" secondItem="khZ-oS-sm0" secondAttribute="bottom" id="1dH-rf-y8N"/>
+                            <constraint firstItem="khZ-oS-sm0" firstAttribute="leading" secondItem="Q3b-lJ-JJj" secondAttribute="leading" id="e42-Tb-uhM"/>
+                            <constraint firstItem="qUt-Jr-KMH" firstAttribute="top" secondItem="Q3b-lJ-JJj" secondAttribute="top" id="hdd-CS-ARH"/>
+                            <constraint firstItem="Q3b-lJ-JJj" firstAttribute="trailing" secondItem="qUt-Jr-KMH" secondAttribute="trailing" id="hgv-bq-j6Z"/>
+                            <constraint firstItem="Q3b-lJ-JJj" firstAttribute="trailing" secondItem="khZ-oS-sm0" secondAttribute="trailing" id="ikP-Aa-xmE"/>
+                            <constraint firstItem="qUt-Jr-KMH" firstAttribute="leading" secondItem="UhL-Fv-bNg" secondAttribute="leading" id="iuq-s9-Raq"/>
+                            <constraint firstItem="khZ-oS-sm0" firstAttribute="top" secondItem="qUt-Jr-KMH" secondAttribute="bottom" id="l24-Cx-JYG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hDW-mX-sYS"/>
+                    <connections>
+                        <outlet property="navBar" destination="qUt-Jr-KMH" id="n9b-XP-sp3"/>
+                        <outlet property="tableView" destination="khZ-oS-sm0" id="Fff-tJ-kHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFZ-CG-Xrh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="-100"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="UaX-N5-DB9">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DAv-Ps-beF" customClass="MapVC" customModule="CartrackChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ca-zF-7uR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugp-Hg-GSA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.27208956870000001" green="0.6340228873" blue="0.79118067780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="User Location" id="jFm-c0-mf3">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="m3Z-dd-R1P">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="navBackClikced" destination="DAv-Ps-beF" id="cit-3R-t49"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="th9-kn-7q9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pPu-b5-OcU"/>
+                        <color key="backgroundColor" red="0.2370708627" green="0.7639744718" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ugp-Hg-GSA" firstAttribute="top" secondItem="pPu-b5-OcU" secondAttribute="top" id="9ah-cH-OVA"/>
+                            <constraint firstItem="th9-kn-7q9" firstAttribute="top" secondItem="ugp-Hg-GSA" secondAttribute="bottom" id="Dsb-xl-1Fx"/>
+                            <constraint firstItem="th9-kn-7q9" firstAttribute="leading" secondItem="pPu-b5-OcU" secondAttribute="leading" id="ESF-YJ-66M"/>
+                            <constraint firstItem="pPu-b5-OcU" firstAttribute="trailing" secondItem="th9-kn-7q9" secondAttribute="trailing" id="EoO-xb-9qB"/>
+                            <constraint firstItem="ugp-Hg-GSA" firstAttribute="leading" secondItem="9ca-zF-7uR" secondAttribute="leading" id="T12-I0-FRZ"/>
+                            <constraint firstItem="pPu-b5-OcU" firstAttribute="bottom" secondItem="th9-kn-7q9" secondAttribute="bottom" id="kjR-bY-HQY"/>
+                            <constraint firstItem="pPu-b5-OcU" firstAttribute="trailing" secondItem="ugp-Hg-GSA" secondAttribute="trailing" id="kvE-QT-JZg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bqn-CU-Xwn"/>
+                    <connections>
+                        <outlet property="mapView" destination="th9-kn-7q9" id="lni-vG-x6H"/>
+                        <outlet property="navBar" destination="ugp-Hg-GSA" id="xZ6-ir-5i7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkx-wG-TVZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3368" y="-100"/>
         </scene>
     </scenes>
 </document>

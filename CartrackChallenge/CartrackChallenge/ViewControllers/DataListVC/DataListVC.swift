@@ -12,7 +12,7 @@ class DataListVC: BaseViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "userCell")
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: UIConstants.textCellIdentifier)
             tableView.tableFooterView = UIView(frame: .zero)
         }
     }
@@ -21,12 +21,11 @@ class DataListVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navbarTitleText = "User List"
+        navbarTitleText = "Users"
         viewModel.delegate = self
         viewModel.callFetchUsers()
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -52,7 +51,7 @@ extension DataListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = viewModel.users[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UIConstants.textCellIdentifier) else {
             fatalError("failed to create cell userCell")
         }
         viewModel.formatCell(cell: cell, user: user)
@@ -61,7 +60,10 @@ extension DataListVC: UITableViewDataSource {
 }
 
 extension DataListVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        showDetailsVC(user: viewModel.users[indexPath.row])
+    }
 }
 
 
@@ -71,4 +73,12 @@ extension DataListVC: DataListViewModelDelegate {
             tableView.reloadData()
         }
     }
+    
+    func showDetailsVC(user: User) {
+        if let detailsVC = UIHelper.vcFromSB(from: .main, withIdentifier: UserDetailsVC.vcIdentifier) as? UserDetailsVC {
+            detailsVC.updateUser(user: user)
+            self.navigationController?.pushViewController(detailsVC, animated: true)
+        }
+    }
+
 }

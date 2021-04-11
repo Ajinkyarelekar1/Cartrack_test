@@ -11,7 +11,7 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
     var navbarTitleText: String? {
         didSet {
-            self.navigationController?.navigationBar.topItem?.title = navbarTitleText
+            navBar.topItem?.title = navbarTitleText
         }
     }
     class var vcIdentifier: String {

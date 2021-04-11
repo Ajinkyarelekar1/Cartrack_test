@@ -19,6 +19,10 @@ class CountryListViewModel: NSObject {
     var currentSearchText = ""
     var delegate: CountryListViewModelDelegate?
     
+    func isValidCountry(country: String) -> Bool {
+        return country != "No match found"
+    }
+    
     func filterList(filterText filter: String) {
         if filter.count > currentSearchText.count && !currentSearchText.isEmpty {
             currentSearchText = filter

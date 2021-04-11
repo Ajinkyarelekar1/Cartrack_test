@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 struct MainConstants {
     static let baseURL = "https://jsonplaceholder.typicode.com/"
 }
@@ -29,3 +30,7 @@ enum UserDefaultKey: String {
     case isDatabaseCreated = "isDatabaseCreated"
 }
 
+struct UIConstants {
+    static let textCellIdentifier = "textCell"
+    static let textCellHeight: CGFloat = 54
+}

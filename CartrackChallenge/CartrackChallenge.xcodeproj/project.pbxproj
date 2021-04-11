@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,14 @@
 		133FD846262328AF00BF139D /* DataListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD845262328AF00BF139D /* DataListVC.swift */; };
 		133FD84E262328C000BF139D /* DataListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD84D262328C000BF139D /* DataListViewModel.swift */; };
 		133FD85326232BE300BF139D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD85226232BE300BF139D /* User.swift */; };
+		133FD87126233CC200BF139D /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD87026233CC200BF139D /* UserDetailsVC.swift */; };
+		133FD87D26233CD900BF139D /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD87C26233CD900BF139D /* UserDetailsViewModel.swift */; };
+		133FD88B2623426D00BF139D /* CompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133FD8892623426D00BF139D /* CompanyCell.xib */; };
+		133FD88C2623426D00BF139D /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD88A2623426D00BF139D /* CompanyCell.swift */; };
+		133FD8B126234E6300BF139D /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8AF26234E6200BF139D /* AddressCell.swift */; };
+		133FD8B226234E6300BF139D /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133FD8B026234E6300BF139D /* AddressCell.xib */; };
+		133FD8C32623571800BF139D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8C22623571800BF139D /* MapVC.swift */; };
+		133FD8CB262357AA00BF139D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8CA262357AA00BF139D /* MapViewModel.swift */; };
 		135274602622A9C300B92E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352745F2622A9C300B92E58 /* AppDelegate.swift */; };
 		135274672622A9C300B92E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135274652622A9C300B92E58 /* Main.storyboard */; };
 		135274692622A9C500B92E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135274682622A9C500B92E58 /* Assets.xcassets */; };
@@ -70,6 +78,14 @@
 		133FD845262328AF00BF139D /* DataListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListVC.swift; sourceTree = "<group>"; };
 		133FD84D262328C000BF139D /* DataListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataListViewModel.swift; sourceTree = "<group>"; };
 		133FD85226232BE300BF139D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		133FD87026233CC200BF139D /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		133FD87C26233CD900BF139D /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		133FD8892623426D00BF139D /* CompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyCell.xib; sourceTree = "<group>"; };
+		133FD88A2623426D00BF139D /* CompanyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
+		133FD8AF26234E6200BF139D /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		133FD8B026234E6300BF139D /* AddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		133FD8C22623571800BF139D /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		133FD8CA262357AA00BF139D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		1352745C2622A9C300B92E58 /* CartrackChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrackChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1352745F2622A9C300B92E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		135274662622A9C300B92E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,7 +157,6 @@
 				CD6F26CF9545792946901960 /* Pods-CartrackChallengeTests.debug.xcconfig */,
 				2F83906075785E5CD3AC4589 /* Pods-CartrackChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +194,42 @@
 				133FD84D262328C000BF139D /* DataListViewModel.swift */,
 			);
 			path = DataListVC;
+			sourceTree = "<group>";
+		};
+		133FD86F26233C7C00BF139D /* DetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				133FD87026233CC200BF139D /* UserDetailsVC.swift */,
+				133FD87C26233CD900BF139D /* UserDetailsViewModel.swift */,
+			);
+			path = DetailsVC;
+			sourceTree = "<group>";
+		};
+		133FD8882623426D00BF139D /* CompanyCell */ = {
+			isa = PBXGroup;
+			children = (
+				133FD88A2623426D00BF139D /* CompanyCell.swift */,
+				133FD8892623426D00BF139D /* CompanyCell.xib */,
+			);
+			path = CompanyCell;
+			sourceTree = "<group>";
+		};
+		133FD8A126234D0500BF139D /* AddressCell */ = {
+			isa = PBXGroup;
+			children = (
+				133FD8AF26234E6200BF139D /* AddressCell.swift */,
+				133FD8B026234E6300BF139D /* AddressCell.xib */,
+			);
+			path = AddressCell;
+			sourceTree = "<group>";
+		};
+		133FD8C12623571800BF139D /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				133FD8C22623571800BF139D /* MapVC.swift */,
+				133FD8CA262357AA00BF139D /* MapViewModel.swift */,
+			);
+			path = MapVC;
 			sourceTree = "<group>";
 		};
 		135274532622A9C300B92E58 = {
@@ -241,6 +292,8 @@
 		135274982622AAB300B92E58 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				133FD8C12623571800BF139D /* MapVC */,
+				133FD86F26233C7C00BF139D /* DetailsVC */,
 				133FD8442623289700BF139D /* DataListVC */,
 				133FD80A2622E14100BF139D /* CountryList */,
 				133FD7FF2622E12200BF139D /* Login */,
@@ -272,6 +325,8 @@
 		135274D22622BC9A00B92E58 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				133FD8882623426D00BF139D /* CompanyCell */,
+				133FD8A126234D0500BF139D /* AddressCell */,
 				135274F12622C24100B92E58 /* ButtonCell */,
 				135274E62622C18800B92E58 /* LogoCell */,
 				135274D92622BCAB00B92E58 /* TitleTextFieldCell */,
@@ -438,6 +493,8 @@
 				135274DC2622BCAB00B92E58 /* TitleTextFieldCell.xib in Resources */,
 				135274F42622C24100B92E58 /* ButtonCell.xib in Resources */,
 				135274672622A9C300B92E58 /* Main.storyboard in Resources */,
+				133FD88B2623426D00BF139D /* CompanyCell.xib in Resources */,
+				133FD8B226234E6300BF139D /* AddressCell.xib in Resources */,
 				135274EA2622C1A100B92E58 /* LogoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,13 +631,19 @@
 				135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */,
 				133FD83B2623128500BF139D /* InitialisationHelper.swift in Sources */,
 				133FD836262305C700BF139D /* LoginUser.swift in Sources */,
+				133FD87D26233CD900BF139D /* UserDetailsViewModel.swift in Sources */,
 				133FD85326232BE300BF139D /* User.swift in Sources */,
+				133FD88C2623426D00BF139D /* CompanyCell.swift in Sources */,
 				135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */,
 				135274602622A9C300B92E58 /* AppDelegate.swift in Sources */,
 				133FD840262316C600BF139D /* Helpers.swift in Sources */,
+				133FD87126233CC200BF139D /* UserDetailsVC.swift in Sources */,
+				133FD8C32623571800BF139D /* MapVC.swift in Sources */,
 				133FD80C2622E18400BF139D /* CountryListVC.swift in Sources */,
+				133FD8CB262357AA00BF139D /* MapViewModel.swift in Sources */,
 				133FD8112622E43000BF139D /* CountryListViewModel.swift in Sources */,
 				133FD8022622E12200BF139D /* LoginViewModel.swift in Sources */,
+				133FD8B126234E6300BF139D /* AddressCell.swift in Sources */,
 				133FD84E262328C000BF139D /* DataListViewModel.swift in Sources */,
 				133FD8032622E12200BF139D /* LoginVC.swift in Sources */,
 				1352749A2622AAB300B92E58 /* BaseViewController.swift in Sources */,

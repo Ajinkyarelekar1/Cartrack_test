@@ -21,7 +21,7 @@ class CountryListVC: BaseViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "countryCell")
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: UIConstants.textCellIdentifier)
             tableView.tableFooterView = UIView(frame: .zero)
         }
     }
@@ -55,7 +55,7 @@ extension CountryListVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UIConstants.textCellIdentifier) else {
             fatalError("failed to create countryCell")
         }
         cell.textLabel?.text = viewModel.filteredList[indexPath.row]
@@ -67,8 +67,11 @@ extension CountryListVC: UITableViewDataSource {
 
 extension CountryListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.selectedCountry(country: viewModel.filteredList[indexPath.row])
-        self.navigationController?.popViewController(animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
+        if viewModel.isValidCountry(country: viewModel.filteredList[indexPath.row]) {
+            delegate?.selectedCountry(country: viewModel.filteredList[indexPath.row])
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 
