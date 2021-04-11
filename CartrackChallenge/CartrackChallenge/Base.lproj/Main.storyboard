@@ -5,21 +5,49 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="CartrackChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="CartrackChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6P5-PQ-e3H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.27208956866197181" green="0.63402288732394363" blue="0.79118067781690138" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Login" id="4eH-qZ-XkS"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tQD-rx-9At">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.2370708627" green="0.7639744718" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6P5-PQ-e3H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4fv-jN-OeA"/>
+                            <constraint firstItem="tQD-rx-9At" firstAttribute="top" secondItem="6P5-PQ-e3H" secondAttribute="bottom" id="69m-lg-a26"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tQD-rx-9At" secondAttribute="bottom" id="JFE-Ik-jjO"/>
+                            <constraint firstItem="6P5-PQ-e3H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OXS-x1-o56"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQD-rx-9At" secondAttribute="trailing" id="WwV-e1-FhF"/>
+                            <constraint firstItem="tQD-rx-9At" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XIp-hz-vbo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6P5-PQ-e3H" secondAttribute="trailing" id="rgd-DW-iJb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="No6-Aa-RMs"/>
+                    <connections>
+                        <outlet property="navBar" destination="6P5-PQ-e3H" id="TAU-UL-22f"/>
+                        <outlet property="tableView" destination="tQD-rx-9At" id="vf9-hV-U2p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,9 +56,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Vai-mG-BdW">
             <objects>
-                <navigationController id="GfA-8U-SxK" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="GfA-8U-SxK" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zyk-pT-VWv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -42,9 +70,4 @@
             <point key="canvasLocation" x="-227" y="-100"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

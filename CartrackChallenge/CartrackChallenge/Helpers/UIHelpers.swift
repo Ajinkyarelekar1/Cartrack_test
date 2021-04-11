@@ -47,3 +47,13 @@ extension UIButton {
         return btnShowPassword
     }
 }
+
+extension UITableView {
+    func setdefaults() {
+        self.separatorStyle = .none
+        self.tableFooterView = UIView()
+    }
+    func registerCell<T: BaseTableCell>(cellType: T.Type) {
+        self.register(cellType.nib(), forCellReuseIdentifier: cellType.cellIdentifier())
+    }
+}

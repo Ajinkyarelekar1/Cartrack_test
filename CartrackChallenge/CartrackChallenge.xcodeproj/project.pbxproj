@@ -16,11 +16,15 @@
 		1352749A2622AAB300B92E58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274992622AAB300B92E58 /* BaseViewController.swift */; };
 		135274A12622AB0800B92E58 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274A02622AB0800B92E58 /* APIHelper.swift */; };
 		135274A62622AB1900B92E58 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274A52622AB1900B92E58 /* MainConstants.swift */; };
-		135274AB2622B27500B92E58 /* LognVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274AA2622B27500B92E58 /* LognVC.swift */; };
+		135274AB2622B27500B92E58 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274AA2622B27500B92E58 /* LoginVC.swift */; };
 		135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274D42622BCA400B92E58 /* BaseTableCell.swift */; };
 		135274DC2622BCAB00B92E58 /* TitleTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */; };
 		135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */; };
 		135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274E12622BCF400B92E58 /* UIHelpers.swift */; };
+		135274E92622C1A100B92E58 /* LogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274E72622C1A100B92E58 /* LogoCell.swift */; };
+		135274EA2622C1A100B92E58 /* LogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274E82622C1A100B92E58 /* LogoCell.xib */; };
+		135274F42622C24100B92E58 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274F22622C24100B92E58 /* ButtonCell.xib */; };
+		135274F52622C24100B92E58 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274F32622C24100B92E58 /* ButtonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +60,15 @@
 		135274992622AAB300B92E58 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		135274A02622AB0800B92E58 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		135274A52622AB1900B92E58 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
-		135274AA2622B27500B92E58 /* LognVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LognVC.swift; sourceTree = "<group>"; };
+		135274AA2622B27500B92E58 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		135274D42622BCA400B92E58 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTextFieldCell.xib; sourceTree = "<group>"; };
 		135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
 		135274E12622BCF400B92E58 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		135274E72622C1A100B92E58 /* LogoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCell.swift; sourceTree = "<group>"; };
+		135274E82622C1A100B92E58 /* LogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoCell.xib; sourceTree = "<group>"; };
+		135274F22622C24100B92E58 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		135274F32622C24100B92E58 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				135274992622AAB300B92E58 /* BaseViewController.swift */,
-				135274AA2622B27500B92E58 /* LognVC.swift */,
+				135274AA2622B27500B92E58 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +179,8 @@
 		135274D22622BC9A00B92E58 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				135274F12622C24100B92E58 /* ButtonCell */,
+				135274E62622C18800B92E58 /* LogoCell */,
 				135274D92622BCAB00B92E58 /* TitleTextFieldCell */,
 				135274D32622BCA400B92E58 /* BaseTableCell */,
 			);
@@ -192,6 +202,24 @@
 				135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */,
 			);
 			path = TitleTextFieldCell;
+			sourceTree = "<group>";
+		};
+		135274E62622C18800B92E58 /* LogoCell */ = {
+			isa = PBXGroup;
+			children = (
+				135274E72622C1A100B92E58 /* LogoCell.swift */,
+				135274E82622C1A100B92E58 /* LogoCell.xib */,
+			);
+			path = LogoCell;
+			sourceTree = "<group>";
+		};
+		135274F12622C24100B92E58 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				135274F22622C24100B92E58 /* ButtonCell.xib */,
+				135274F32622C24100B92E58 /* ButtonCell.swift */,
+			);
+			path = ButtonCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +328,9 @@
 				1352746C2622A9C500B92E58 /* LaunchScreen.storyboard in Resources */,
 				135274692622A9C500B92E58 /* Assets.xcassets in Resources */,
 				135274DC2622BCAB00B92E58 /* TitleTextFieldCell.xib in Resources */,
+				135274F42622C24100B92E58 /* ButtonCell.xib in Resources */,
 				135274672622A9C300B92E58 /* Main.storyboard in Resources */,
+				135274EA2622C1A100B92E58 /* LogoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,11 +358,13 @@
 				135274A62622AB1900B92E58 /* MainConstants.swift in Sources */,
 				135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */,
 				135274A12622AB0800B92E58 /* APIHelper.swift in Sources */,
+				135274F52622C24100B92E58 /* ButtonCell.swift in Sources */,
 				135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */,
 				135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */,
 				135274602622A9C300B92E58 /* AppDelegate.swift in Sources */,
-				135274AB2622B27500B92E58 /* LognVC.swift in Sources */,
+				135274AB2622B27500B92E58 /* LoginVC.swift in Sources */,
 				1352749A2622AAB300B92E58 /* BaseViewController.swift in Sources */,
+				135274E92622C1A100B92E58 /* LogoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
