@@ -25,6 +25,7 @@
 		135274EA2622C1A100B92E58 /* LogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274E82622C1A100B92E58 /* LogoCell.xib */; };
 		135274F42622C24100B92E58 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274F22622C24100B92E58 /* ButtonCell.xib */; };
 		135274F52622C24100B92E58 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274F32622C24100B92E58 /* ButtonCell.swift */; };
+		13FB80E22622C58C00E99BDE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB80E12622C58C00E99BDE /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		135274E82622C1A100B92E58 /* LogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoCell.xib; sourceTree = "<group>"; };
 		135274F22622C24100B92E58 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		135274F32622C24100B92E58 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		13FB80E12622C58C00E99BDE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				135274992622AAB300B92E58 /* BaseViewController.swift */,
 				135274AA2622B27500B92E58 /* LoginVC.swift */,
+				13FB80E12622C58C00E99BDE /* LoginViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				135274A62622AB1900B92E58 /* MainConstants.swift in Sources */,
 				135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */,
+				13FB80E22622C58C00E99BDE /* LoginViewModel.swift in Sources */,
 				135274A12622AB0800B92E58 /* APIHelper.swift in Sources */,
 				135274F52622C24100B92E58 /* ButtonCell.swift in Sources */,
 				135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */,

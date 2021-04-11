@@ -8,9 +8,13 @@
 import UIKit
 
 class ButtonCell: BaseTableCell, CustomCellProtocol {
-    var cellHeight: CGFloat = 70
+    var cellHeight: CGFloat = 60
     
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var btn: UIButton! {
+        didSet {
+            btn.roundedCorners()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +28,6 @@ class ButtonCell: BaseTableCell, CustomCellProtocol {
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        btn.roundedCorners()
         addEdgeInset()
     }
 }

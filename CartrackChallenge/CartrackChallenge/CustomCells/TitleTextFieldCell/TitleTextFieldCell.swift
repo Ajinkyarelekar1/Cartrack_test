@@ -10,7 +10,11 @@ import UIKit
 class TitleTextFieldCell: BaseTableCell, CustomCellProtocol {
     var cellHeight: CGFloat = 100
     
-    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var textfield: UITextField! {
+        didSet {
+            textfield.leftPadding()
+        }
+    }
     @IBOutlet weak var label: UILabel!
 
     override func awakeFromNib() {

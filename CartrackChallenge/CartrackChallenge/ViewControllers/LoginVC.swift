@@ -13,17 +13,22 @@ class LoginVC: BaseViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.registerCell(cellType: LogoCell.self)
+            tableView.registerCell(cellType: TitleTextFieldCell.self)
+            tableView.registerCell(cellType: ButtonCell.self)
+            tableView.setdefaults()
         }
     }
+    
+    let viewModel = LoginViewModel()
 
     override func viewDidLoad() {
-        self.navbarTitleText = "Login"
+        self.navbarTitleText = viewModel.screenTitle
+        viewModel.viewModelDelegate = self
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -38,16 +43,29 @@ class LoginVC: BaseViewController {
 
 extension LoginVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.rows.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.rows[indexPath.row].height
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let row = viewModel.rows[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: row.identifier) else {
+            fatalError("failed to create cell \(row.identifier)")
+        }
+        viewModel.formatCell(cell, rowModel: row)
+        return cell
     }
 }
 
 
 extension LoginVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 }
 
+extension LoginVC: LoginViewModelDelegates {
+}
