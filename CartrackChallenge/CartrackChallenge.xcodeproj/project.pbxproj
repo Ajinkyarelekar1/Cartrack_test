@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		135274602622A9C300B92E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352745F2622A9C300B92E58 /* AppDelegate.swift */; };
-		135274622622A9C300B92E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274612622A9C300B92E58 /* SceneDelegate.swift */; };
 		135274672622A9C300B92E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135274652622A9C300B92E58 /* Main.storyboard */; };
 		135274692622A9C500B92E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135274682622A9C500B92E58 /* Assets.xcassets */; };
 		1352746C2622A9C500B92E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1352746A2622A9C500B92E58 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,10 @@
 		135274A12622AB0800B92E58 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274A02622AB0800B92E58 /* APIHelper.swift */; };
 		135274A62622AB1900B92E58 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274A52622AB1900B92E58 /* MainConstants.swift */; };
 		135274AB2622B27500B92E58 /* LognVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274AA2622B27500B92E58 /* LognVC.swift */; };
+		135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274D42622BCA400B92E58 /* BaseTableCell.swift */; };
+		135274DC2622BCAB00B92E58 /* TitleTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */; };
+		135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */; };
+		135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274E12622BCF400B92E58 /* UIHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 /* Begin PBXFileReference section */
 		1352745C2622A9C300B92E58 /* CartrackChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrackChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1352745F2622A9C300B92E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		135274612622A9C300B92E58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		135274662622A9C300B92E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		135274682622A9C500B92E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1352746B2622A9C500B92E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		135274A02622AB0800B92E58 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		135274A52622AB1900B92E58 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
 		135274AA2622B27500B92E58 /* LognVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LognVC.swift; sourceTree = "<group>"; };
+		135274D42622BCA400B92E58 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
+		135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTextFieldCell.xib; sourceTree = "<group>"; };
+		135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
+		135274E12622BCF400B92E58 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +111,11 @@
 		1352745E2622A9C300B92E58 /* CartrackChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				135274D22622BC9A00B92E58 /* CustomCells */,
 				1352749E2622AAF100B92E58 /* Constants */,
 				1352749F2622AAF100B92E58 /* Helpers */,
 				135274982622AAB300B92E58 /* ViewControllers */,
 				1352745F2622A9C300B92E58 /* AppDelegate.swift */,
-				135274612622A9C300B92E58 /* SceneDelegate.swift */,
 				135274652622A9C300B92E58 /* Main.storyboard */,
 				135274682622A9C500B92E58 /* Assets.xcassets */,
 				1352746A2622A9C500B92E58 /* LaunchScreen.storyboard */,
@@ -157,8 +163,35 @@
 			isa = PBXGroup;
 			children = (
 				135274A02622AB0800B92E58 /* APIHelper.swift */,
+				135274E12622BCF400B92E58 /* UIHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		135274D22622BC9A00B92E58 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				135274D92622BCAB00B92E58 /* TitleTextFieldCell */,
+				135274D32622BCA400B92E58 /* BaseTableCell */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		135274D32622BCA400B92E58 /* BaseTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				135274D42622BCA400B92E58 /* BaseTableCell.swift */,
+			);
+			path = BaseTableCell;
+			sourceTree = "<group>";
+		};
+		135274D92622BCAB00B92E58 /* TitleTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */,
+				135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */,
+			);
+			path = TitleTextFieldCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +299,7 @@
 			files = (
 				1352746C2622A9C500B92E58 /* LaunchScreen.storyboard in Resources */,
 				135274692622A9C500B92E58 /* Assets.xcassets in Resources */,
+				135274DC2622BCAB00B92E58 /* TitleTextFieldCell.xib in Resources */,
 				135274672622A9C300B92E58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,9 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				135274A62622AB1900B92E58 /* MainConstants.swift in Sources */,
+				135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */,
 				135274A12622AB0800B92E58 /* APIHelper.swift in Sources */,
+				135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */,
+				135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */,
 				135274602622A9C300B92E58 /* AppDelegate.swift in Sources */,
-				135274622622A9C300B92E58 /* SceneDelegate.swift in Sources */,
 				135274AB2622B27500B92E58 /* LognVC.swift in Sources */,
 				1352749A2622AAB300B92E58 /* BaseViewController.swift in Sources */,
 			);

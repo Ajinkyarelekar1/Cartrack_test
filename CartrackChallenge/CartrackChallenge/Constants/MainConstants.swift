@@ -10,6 +10,9 @@ struct MainConstants {
     static let baseURL = "https://jsonplaceholder.typicode.com/"
 }
 
+enum StoryBoards: String {
+    case main = "Main"
+}
 
 enum APIServices: String {
     case users = "users"
