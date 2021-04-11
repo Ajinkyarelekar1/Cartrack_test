@@ -69,5 +69,65 @@
             </objects>
             <point key="canvasLocation" x="-227" y="-100"/>
         </scene>
+        <!--Country ListVC-->
+        <scene sceneID="EK0-RJ-2Zx">
+            <objects>
+                <viewController storyboardIdentifier="CountryListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AXf-jA-pkx" customClass="CountryListVC" customModule="CartrackChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HAa-fc-Grm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nA4-g1-77f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.27208956870000001" green="0.6340228873" blue="0.79118067780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Login" id="ZVa-7R-qqV">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="Hi3-jD-W4m">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="navBackClikced" destination="AXf-jA-pkx" id="79K-VR-ngf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Vr-d2-47C">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hK3-S9-AVw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YTo-VO-eeb"/>
+                        <color key="backgroundColor" red="0.2370708627" green="0.7639744718" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nA4-g1-77f" firstAttribute="leading" secondItem="HAa-fc-Grm" secondAttribute="leading" id="DYm-I0-CMM"/>
+                            <constraint firstItem="hK3-S9-AVw" firstAttribute="top" secondItem="nA4-g1-77f" secondAttribute="bottom" id="N3l-7j-Gjt"/>
+                            <constraint firstItem="hK3-S9-AVw" firstAttribute="leading" secondItem="YTo-VO-eeb" secondAttribute="leading" id="Rqp-i4-M4T"/>
+                            <constraint firstItem="8Vr-d2-47C" firstAttribute="leading" secondItem="YTo-VO-eeb" secondAttribute="leading" id="VM6-EN-Kwj"/>
+                            <constraint firstItem="YTo-VO-eeb" firstAttribute="trailing" secondItem="nA4-g1-77f" secondAttribute="trailing" id="cWY-0Q-rrA"/>
+                            <constraint firstItem="YTo-VO-eeb" firstAttribute="bottom" secondItem="8Vr-d2-47C" secondAttribute="bottom" id="iUu-G5-C2m"/>
+                            <constraint firstItem="hK3-S9-AVw" firstAttribute="trailing" secondItem="YTo-VO-eeb" secondAttribute="trailing" id="kHq-kg-sw5"/>
+                            <constraint firstItem="8Vr-d2-47C" firstAttribute="top" secondItem="hK3-S9-AVw" secondAttribute="bottom" id="kPQ-mT-158"/>
+                            <constraint firstItem="nA4-g1-77f" firstAttribute="top" secondItem="YTo-VO-eeb" secondAttribute="top" id="sAK-6o-nOU"/>
+                            <constraint firstItem="YTo-VO-eeb" firstAttribute="trailing" secondItem="8Vr-d2-47C" secondAttribute="trailing" id="yuL-vH-qRE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OuW-nw-9J8"/>
+                    <connections>
+                        <outlet property="navBar" destination="nA4-g1-77f" id="qlJ-93-cch"/>
+                        <outlet property="searchBar" destination="hK3-S9-AVw" id="dsJ-Py-AMk"/>
+                        <outlet property="tableView" destination="8Vr-d2-47C" id="RIa-8P-r0I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zyq-Ib-1Uh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.68115942029" y="-100.44642857142857"/>
+        </scene>
     </scenes>
 </document>

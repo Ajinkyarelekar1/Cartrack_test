@@ -9,14 +9,15 @@ import Foundation
 import UIKit
 
 protocol LoginViewModelDelegates {
+    func showCountrySelection()
 }
 
-
-
 class LoginViewModel: NSObject {
+    private let countryTextTag = 11
     var screenTitle = "Login"
-    var viewModelDelegate: LoginViewModelDelegates?
+    var delegate: LoginViewModelDelegates?
     var passwordTextfiled: UITextField?
+    var selectedCountry = ""
     var isSecurePassword = true {
         didSet {
             passwordTextfiled?.isSecureTextEntry = isSecurePassword
@@ -42,6 +43,9 @@ class LoginViewModel: NSObject {
                 passwordTextfiled?.isSecureTextEntry = isSecurePassword
                 let showBtn = UIHelper.addShowPassworButtonToTextfield(textfield: cell.textfield, target: self)
                 showBtn.addTarget(self, action: #selector(self.showPassClicked(_:)), for: .touchUpInside)
+            } else if rowModel.cellType == .country {
+                cell.textfield.text = selectedCountry
+                cell.textfield.tag = countryTextTag
             }
         } else if let cell = cell as? ButtonCell {
             cell.btn.setTitle(rowModel.title, for: .normal)
@@ -73,6 +77,13 @@ extension LoginViewModel: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         _ = textField.restorationIdentifier
         return false
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField.tag == countryTextTag {
+            delegate?.showCountrySelection()
+            return false
+        }
+        return true
     }
 }
 

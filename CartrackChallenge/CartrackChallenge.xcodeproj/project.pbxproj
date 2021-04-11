@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133FD8022622E12200BF139D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8002622E12200BF139D /* LoginViewModel.swift */; };
+		133FD8032622E12200BF139D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8012622E12200BF139D /* LoginVC.swift */; };
+		133FD80C2622E18400BF139D /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD80B2622E18400BF139D /* CountryListVC.swift */; };
+		133FD8112622E43000BF139D /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FD8102622E43000BF139D /* CountryListViewModel.swift */; };
 		135274602622A9C300B92E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352745F2622A9C300B92E58 /* AppDelegate.swift */; };
 		135274672622A9C300B92E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135274652622A9C300B92E58 /* Main.storyboard */; };
 		135274692622A9C500B92E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135274682622A9C500B92E58 /* Assets.xcassets */; };
@@ -16,7 +20,6 @@
 		1352749A2622AAB300B92E58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274992622AAB300B92E58 /* BaseViewController.swift */; };
 		135274A12622AB0800B92E58 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274A02622AB0800B92E58 /* APIHelper.swift */; };
 		135274A62622AB1900B92E58 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274A52622AB1900B92E58 /* MainConstants.swift */; };
-		135274AB2622B27500B92E58 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274AA2622B27500B92E58 /* LoginVC.swift */; };
 		135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274D42622BCA400B92E58 /* BaseTableCell.swift */; };
 		135274DC2622BCAB00B92E58 /* TitleTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */; };
 		135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */; };
@@ -25,7 +28,6 @@
 		135274EA2622C1A100B92E58 /* LogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274E82622C1A100B92E58 /* LogoCell.xib */; };
 		135274F42622C24100B92E58 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135274F22622C24100B92E58 /* ButtonCell.xib */; };
 		135274F52622C24100B92E58 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135274F32622C24100B92E58 /* ButtonCell.swift */; };
-		13FB80E22622C58C00E99BDE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB80E12622C58C00E99BDE /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		133FD8002622E12200BF139D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		133FD8012622E12200BF139D /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		133FD80B2622E18400BF139D /* CountryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
+		133FD8102622E43000BF139D /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
 		1352745C2622A9C300B92E58 /* CartrackChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrackChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1352745F2622A9C300B92E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		135274662622A9C300B92E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +67,6 @@
 		135274992622AAB300B92E58 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		135274A02622AB0800B92E58 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		135274A52622AB1900B92E58 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
-		135274AA2622B27500B92E58 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		135274D42622BCA400B92E58 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		135274DA2622BCAB00B92E58 /* TitleTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleTextFieldCell.xib; sourceTree = "<group>"; };
 		135274DB2622BCAB00B92E58 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
@@ -70,7 +75,6 @@
 		135274E82622C1A100B92E58 /* LogoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoCell.xib; sourceTree = "<group>"; };
 		135274F22622C24100B92E58 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		135274F32622C24100B92E58 /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		13FB80E12622C58C00E99BDE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133FD7FF2622E12200BF139D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				133FD8002622E12200BF139D /* LoginViewModel.swift */,
+				133FD8012622E12200BF139D /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		133FD80A2622E14100BF139D /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+				133FD80B2622E18400BF139D /* CountryListVC.swift */,
+				133FD8102622E43000BF139D /* CountryListViewModel.swift */,
+			);
+			path = CountryList;
+			sourceTree = "<group>";
+		};
 		135274532622A9C300B92E58 = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +177,9 @@
 		135274982622AAB300B92E58 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				133FD80A2622E14100BF139D /* CountryList */,
+				133FD7FF2622E12200BF139D /* Login */,
 				135274992622AAB300B92E58 /* BaseViewController.swift */,
-				135274AA2622B27500B92E58 /* LoginVC.swift */,
-				13FB80E12622C58C00E99BDE /* LoginViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -360,13 +382,15 @@
 			files = (
 				135274A62622AB1900B92E58 /* MainConstants.swift in Sources */,
 				135274D52622BCA400B92E58 /* BaseTableCell.swift in Sources */,
-				13FB80E22622C58C00E99BDE /* LoginViewModel.swift in Sources */,
 				135274A12622AB0800B92E58 /* APIHelper.swift in Sources */,
 				135274F52622C24100B92E58 /* ButtonCell.swift in Sources */,
 				135274E22622BCF400B92E58 /* UIHelpers.swift in Sources */,
 				135274DD2622BCAB00B92E58 /* TitleTextFieldCell.swift in Sources */,
 				135274602622A9C300B92E58 /* AppDelegate.swift in Sources */,
-				135274AB2622B27500B92E58 /* LoginVC.swift in Sources */,
+				133FD80C2622E18400BF139D /* CountryListVC.swift in Sources */,
+				133FD8112622E43000BF139D /* CountryListViewModel.swift in Sources */,
+				133FD8022622E12200BF139D /* LoginViewModel.swift in Sources */,
+				133FD8032622E12200BF139D /* LoginVC.swift in Sources */,
 				1352749A2622AAB300B92E58 /* BaseViewController.swift in Sources */,
 				135274E92622C1A100B92E58 /* LogoCell.swift in Sources */,
 			);

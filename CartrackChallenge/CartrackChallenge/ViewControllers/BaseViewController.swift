@@ -14,7 +14,9 @@ class BaseViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.title = navbarTitleText
         }
     }
-
+    class var vcIdentifier: String {
+        return String(describing: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
