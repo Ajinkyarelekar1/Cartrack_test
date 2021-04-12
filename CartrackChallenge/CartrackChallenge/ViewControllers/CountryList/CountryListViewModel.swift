@@ -27,11 +27,13 @@ class CountryListViewModel: NSObject {
         if filter.count > currentSearchText.count && !currentSearchText.isEmpty {
             currentSearchText = filter
             let index = currentSearchText.index(currentSearchText.startIndex, offsetBy: currentSearchText.count-1)
-            filteredList = filteredList.filter({$0[...index].lowercased().contains(currentSearchText.lowercased())})
-            if filteredList.isEmpty {
-                filteredList.append("No match found")
+            if index < currentSearchText.endIndex {
+                filteredList = filteredList.filter({$0[...index].lowercased().contains(currentSearchText.lowercased())})
+                if filteredList.isEmpty {
+                    filteredList.append("No match found")
+                }
+                delegate?.reloadList()
             }
-            delegate?.reloadList()
         } else if !filter.isEmpty {
             currentSearchText = filter
             let index = currentSearchText.index(currentSearchText.startIndex, offsetBy: currentSearchText.count-1)
