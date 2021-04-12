@@ -26,22 +26,18 @@ class CountryListViewModel: NSObject {
     func filterList(filterText filter: String) {
         if filter.count > currentSearchText.count && !currentSearchText.isEmpty {
             currentSearchText = filter
-            let index = currentSearchText.index(currentSearchText.startIndex, offsetBy: currentSearchText.count-1)
-            if index < currentSearchText.endIndex {
-                filteredList = filteredList.filter({$0[...index].lowercased().contains(currentSearchText.lowercased())})
-                if filteredList.isEmpty {
-                    filteredList.append("No match found")
-                }
-                delegate?.reloadList()
+            let index = currentSearchText.endIndex
+            filteredList = filteredList.filter({index<$0.endIndex && $0[...index].lowercased().contains(currentSearchText.lowercased())})
+            if filteredList.isEmpty {
+                filteredList.append("No match found")
             }
         } else if !filter.isEmpty {
             currentSearchText = filter
-            let index = currentSearchText.index(currentSearchText.startIndex, offsetBy: currentSearchText.count-1)
-            filteredList = filteredList.filter({$0[...index].lowercased().contains(currentSearchText.lowercased())})
-            delegate?.reloadList()
+            let index = currentSearchText.endIndex
+            filteredList = filteredList.filter({index<$0.endIndex && $0[...index].lowercased().contains(currentSearchText.lowercased())})
         } else {
             filteredList = CountryListViewModel.countryList
-            delegate?.reloadList()
         }
+        delegate?.reloadList()
     }
 }
